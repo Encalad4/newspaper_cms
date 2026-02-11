@@ -1,0 +1,7 @@
+npm --version
+11.8.0
+
+node --version
+v24.13.1
+
+vite v7.3.1
