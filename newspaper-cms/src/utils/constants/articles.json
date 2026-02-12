@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "headline": "First Article",
+    "body": "Hello World!",
+    "author": "John Doe",
+    "publishedDate": "2024-06-01",
+    "published": true
+  },
+  {
+    "id": 2,
+    "headline": "Second Article",
+    "body": "This is my CMS",
+    "author": "Jane Smith",
+    "publishedDate": "2024-06-02",
+    "published": false
+  }
+]

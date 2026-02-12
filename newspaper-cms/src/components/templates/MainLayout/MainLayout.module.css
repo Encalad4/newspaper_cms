@@ -1,0 +1,16 @@
+/* src/components/templates/MainLayout/MainLayout.module.css */
+.layout {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
