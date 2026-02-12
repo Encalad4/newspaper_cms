@@ -14,5 +14,93 @@
     "author": "Jane Smith",
     "publishedDate": "2024-06-02",
     "published": false
+  },
+  {
+    "id": 3,
+    "headline": "The Future of Web Development",
+    "body": "Exploring React 19 and beyond...",
+    "author": "Alice Johnson",
+    "publishedDate": "2024-06-03",
+    "published": true
+  },
+  {
+    "id": 4,
+    "headline": "CSS Grid vs Flexbox",
+    "body": "When to use each layout system",
+    "author": "Bob Williams",
+    "publishedDate": "2024-06-04",
+    "published": true
+  },
+  {
+    "id": 5,
+    "headline": "State Management in 2024",
+    "body": "Zustand, Jotai, and Redux Toolkit",
+    "author": "Carol Martinez",
+    "publishedDate": "2024-06-05",
+    "published": false
+  },
+  {
+    "id": 6,
+    "headline": "TypeScript Best Practices",
+    "body": "Writing type-safe React components",
+    "author": "David Brown",
+    "publishedDate": "2024-06-06",
+    "published": true
+  },
+  {
+    "id": 7,
+    "headline": "Responsive Design Patterns",
+    "body": "Mobile-first approach in 2024",
+    "author": "Eva Garcia",
+    "publishedDate": "2024-06-07",
+    "published": false
+  },
+  {
+    "id": 8,
+    "headline": "Introduction to Next.js 14",
+    "body": "Server components and routing",
+    "author": "Frank Lee",
+    "publishedDate": "2024-06-08",
+    "published": true
+  },
+  {
+    "id": 9,
+    "headline": "Web Accessibility Guide",
+    "body": "Making your CMS accessible to all",
+    "author": "Grace Kim",
+    "publishedDate": "2024-06-09",
+    "published": false
+  },
+  {
+    "id": 10,
+    "headline": "Performance Optimization",
+    "body": "Lazy loading and code splitting",
+    "author": "Henry Chen",
+    "publishedDate": "2024-06-10",
+    "published": true
+  },
+  {
+    "id": 11,
+    "headline": "Testing React Applications",
+    "body": "Jest and React Testing Library",
+    "author": "Irene Patel",
+    "publishedDate": "2024-06-11",
+    "published": false
+  },
+  {
+    "id": 12,
+    "headline": "GraphQL with Apollo",
+    "body": "Modern data fetching patterns",
+    "author": "Jack Wilson",
+    "publishedDate": "2024-06-12",
+    "published": true
+  },
+  {
+    "id": 13,
+    "headline": "Deploying Your CMS",
+    "body": "Vercel, Netlify, and AWS options",
+    "author": "Karen Taylor",
+    "publishedDate": "2024-06-13",
+    "published": false
   }
 ]

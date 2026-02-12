@@ -5,82 +5,89 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
   padding: 16px 24px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   transition: box-shadow 0.2s ease;
 }
 
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9fafd;
 }
 
 /* Left section - Article info */
 .articleInfo {
   display: flex;
   align-items: center;
-  gap: 24px;
-  flex: 1;
+  width: 75.96%; /* 44.16% + 15.90% + 15.90% */
+  flex: none;
+  min-width: 0;
 }
 
 .title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+  font-size: 14px;
+  color: #000000;
   margin: 0;
-  min-width: 200px;
-  max-width: 300px;
+  width: 58.1753%; /* Exact Figma percentage */
+  flex: none;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 16px; /* Spacing between columns */
+  box-sizing: border-box;
 }
 
 .author {
   font-size: 14px;
-  color: #666;
+  color: #000000;
   margin: 0;
-  min-width: 120px;
+  width: 20.932%; /* Exact Figma percentage */
+  flex: none;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 16px; /* Spacing between columns */
+  box-sizing: border-box;
 }
 
 .date {
   font-size: 14px;
-  color: #999;
+  color: #000000;
   margin: 0;
-  min-width: 100px;
+  width: 20.932%; /* Exact Figma percentage */
+  flex: none;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
-/* Right section - Controls */
-.controls {
+/* Switch container - separate */
+.switchContainer {
   display: flex;
   align-items: center;
-  gap: 20px;
+  width: 15.90%; /* Exact Figma percentage */
+  flex: none;
+  padding-right: 16px; /* Spacing between switch and three dots */
+  box-sizing: border-box;
 }
 
-.publishControl {
+/* Three dots icon - separate */
+.menuButton {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.publishLabel {
-  font-size: 13px;
-  font-weight: 500;
-  padding: 4px 8px;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   border-radius: 4px;
-  background-color: #f5f5f5;
-  color: #666;
+  transition: background-color 0.2s ease;
+  width: 8.12%; /* Exact Figma percentage */
+  flex: none;
 }
 
-/* When published */
-.published .publishLabel {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-/* Draft state */
-.draft .publishLabel {
-  background-color: #ffebee;
-  color: #c62828;
-}

@@ -4,24 +4,21 @@ import { styled } from '@mui/material/styles';
 import styles from './Switch.module.css';
 
 const StyledSwitch = styled(MuiSwitch)({
-  '& .MuiSwitch-switchBase.Mui-checked': {
-    color: '#4CAF50',
-    '&:hover': {
-      backgroundColor: 'rgba(76, 175, 80, 0.08)',
-    },
-  },
-  '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-    backgroundColor: '#4CAF50',
-  },
   '& .MuiSwitch-switchBase': {
-    color: '#ccc',
+    color: '#ffff',
   },
   '& .MuiSwitch-track': {
-    backgroundColor: '#ccc',
+    backgroundColor: '#8E8E8E',
+  },
+  '& .MuiSwitch-thumb': {
+    boxShadow: '0 0 0 1px #E5E5E5', // Gray circle around the ball
+  },
+  '& .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb': {
+    boxShadow: '0 0 0 2px #6DF491', // Green circle when on
   },
 });
 
-const Switch = ({ isOn, handleToggle, onColor = '#4CAF50' }) => {
+const Switch = ({ isOn, handleToggle, onColor = '#6DF491' }) => {
   return (
     <div className={styles.switchContainer}>
       <StyledSwitch

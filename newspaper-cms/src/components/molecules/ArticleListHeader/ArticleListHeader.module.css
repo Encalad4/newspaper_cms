@@ -1,0 +1,51 @@
+/* src/components/molecules/ArticleListHeaders/ArticleListHeader.module.css */
+.headers {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Match the column widths with ArticleCard */
+.header {
+  width: 44.16%; /* Matches title width */
+  flex: none;
+  margin-right: 0;
+    font-size: 14px;
+}
+
+.author{
+  width: 15.90%; /* Matches author width */
+  flex: none;
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.publishDate {
+  width: 15.90%; /* Matches date width */
+  flex: none;
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.publishStatus {
+  width: 15.90%; /* Matches Switch width */
+  flex: none;
+  margin-right: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Add an empty cell for the three dots space in header */
+.emptyCell {
+  content: "";
+  width: 8.12%; /* Matches three dots width */
+  flex: none;
+}

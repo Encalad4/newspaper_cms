@@ -1,4 +1,15 @@
-/* src/pages/ArticlePage/ArticlesPage.module.css */
+/* src/pages/ArticlesPage/ArticlesPage.module.css */
+.pageLayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.contentArea {
+  flex: 1;
+  margin-left: 260px; /* Same as sidebar width */
+  background-color: #f9f9f9;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

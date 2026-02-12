@@ -5,3 +5,10 @@ node --version
 v24.13.1
 
 vite v7.3.1
+
+figma threeDotsIcon.png
+
+figma Senirop Logo.png
+
+@mui/material
+@mui/icons-material
