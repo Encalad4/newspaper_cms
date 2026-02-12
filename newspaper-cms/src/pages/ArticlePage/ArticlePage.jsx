@@ -3,7 +3,7 @@ import React from 'react';
 import MainLayout from '../../components/templates/MainLayout/MainLayout';
 import ArticleList from '../../components/organisms/ArticleList/ArticleList';
 import styles from './ArticlesPage.module.css';
-import { SAMPLE_ARTICLES } from '../../utils/constants/articles.json';
+import articles from '../../utils/constants/articles.json';
 
 const ArticlesPage = () => {
 
@@ -12,7 +12,7 @@ const ArticlesPage = () => {
     <MainLayout>
       <div className={styles.container}>
         <h1>Articles</h1>
-        <ArticleList articles={SAMPLE_ARTICLES} />
+        <ArticleList articles={articles} />
       </div>
     </MainLayout>
   );

@@ -1,18 +1,86 @@
-/* src/components/molecules/ArticleCard/ArticleCard.module.css */
+/* newspaper-cms/src/molecules/ArticleCard/ArticleCard.module.css */
+
 .card {
-  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 1rem;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px 24px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section - Article info */
+.articleInfo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
 }
 
 .title {
-  margin: 0 0 0.5rem 0;
+  font-size: 16px;
+  font-weight: 600;
   color: #333;
+  margin: 0;
+  min-width: 200px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.content {
+.author {
+  font-size: 14px;
   color: #666;
-  margin-bottom: 1rem;
+  margin: 0;
+  min-width: 120px;
+}
+
+.date {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+  min-width: 100px;
+}
+
+/* Right section - Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.publishControl {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.publishLabel {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* When published */
+.published .publishLabel {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Draft state */
+.draft .publishLabel {
+  background-color: #ffebee;
+  color: #c62828;
 }
