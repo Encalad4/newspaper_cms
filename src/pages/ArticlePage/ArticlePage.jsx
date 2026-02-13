@@ -1,6 +1,6 @@
-// src/pages/ArticlesPage/ArticlesPage.jsx
+// src/pages/ArticlePage/ArticlePage.jsx
 import React, { useState } from 'react';
-import Sidebar from '../../components/organisms/Sidebar/Sidebar';
+import Sidebar from '../../components/organisms/SideBar/SideBar';
 import ArticleManagementContainer from '../../components/organisms/ArticleManagementContainer/ArticleManagementContainer';
 import styles from './ArticlesPage.module.css';
 import initialArticles from '../../utils/constants/articles.json';
