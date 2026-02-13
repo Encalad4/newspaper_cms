@@ -9,6 +9,7 @@
   background-color: white;
   width: 100%;
   transition: box-shadow 0.2s ease;
+  position: relative;
 }
 
 .card:hover {
@@ -16,7 +17,7 @@
   background-color: #f9fafd;
 }
 
-/* Left section - Article info */
+
 .articleInfo {
   display: flex;
   align-items: center;
@@ -29,13 +30,13 @@
   font-size: 14px;
   color: #000000;
   margin: 0;
-  width: 58.1753%; /* Exact Figma percentage */
+  width: 58.1753%; 
   flex: none;
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 16px; /* Spacing between columns */
+  padding-right: 16px; 
   box-sizing: border-box;
 }
 
@@ -43,13 +44,13 @@
   font-size: 14px;
   color: #000000;
   margin: 0;
-  width: 20.932%; /* Exact Figma percentage */
+  width: 20.932%; 
   flex: none;
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 16px; /* Spacing between columns */
+  padding-right: 16px;
   box-sizing: border-box;
 }
 
@@ -66,28 +67,75 @@
   box-sizing: border-box;
 }
 
-/* Switch container - separate */
+
 .switchContainer {
   display: flex;
   align-items: center;
-  width: 15.90%; /* Exact Figma percentage */
+  width: 15.90%; 
   flex: none;
-  padding-right: 16px; /* Spacing between switch and three dots */
+  padding-right: 16px; 
   box-sizing: border-box;
 }
 
-/* Three dots icon - separate */
+/* Three dots container */
+.menuContainer {
+  position: relative;
+  width: 8.12%; 
+  flex: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Three dots button */
 .menuButton {
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
-  padding: 0;
+  padding: 8px;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.2s ease;
-  width: 8.12%; /* Exact Figma percentage */
-  flex: none;
+  width: 100%;
 }
 
+.menuButton:hover {
+  background-color: #f0f0f0;
+}
+
+
+.optionsMenuWrapper {
+  position: absolute;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.optionsMenuWrapper.position-left {
+  right: 0;
+  left: auto;
+}
+
+.optionsMenuWrapper.position-right {
+  left: 0;
+  right: auto;
+}
+
+.optionsMenuWrapper.position-bottom {
+  top: 100%;
+  bottom: auto;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.optionsMenuWrapper.position-top {
+  bottom: 100%;
+  top: auto;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.listContainer {
+  position: relative;
+  overflow-y: auto;
+}

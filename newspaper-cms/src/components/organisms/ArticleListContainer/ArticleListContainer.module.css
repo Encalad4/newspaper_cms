@@ -8,6 +8,7 @@
   border: 1px solid #e0e0e0;
   gap: none;
   padding: 0px;
+  position: relative;
 }
 
 .list {
@@ -15,4 +16,5 @@
   overflow-y: auto;
   border: none;
   min-height: 0;
+  position: relative;
 }
