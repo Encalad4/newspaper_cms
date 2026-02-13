@@ -9,7 +9,6 @@
   font-weight: 700;
   color: #000000;
   font-size: 14px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -18,7 +17,7 @@
   width: 44.16%; /* Matches title width */
   flex: none;
   margin-right: 0;
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .author{

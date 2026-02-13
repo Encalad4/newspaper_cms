@@ -2,6 +2,8 @@
 import React from 'react';
 import HeaderLookUp from '../../molecules/HeaderLookUp/HeaderLookUp';
 import ArticleListContainer from '../ArticleListContainer/ArticleListContainer';
+import NewButton from '../../atoms/NewButton/NewButton';
+import FilterDropdown from '../../atoms/FilterDropdown/FilterDropdown';
 import styles from './ArticleManagementContainer.module.css';
 
 const ArticleManagementContainer = ({ articles, onPublishToggle }) => {
@@ -10,7 +12,10 @@ const ArticleManagementContainer = ({ articles, onPublishToggle }) => {
       <HeaderLookUp />
       <div className={styles.content}>
         <h2 className={styles.title}>Articles</h2>
-        <div/>
+        <div className={styles.actionsBar}>
+          <FilterDropdown />
+          <NewButton text="+ ADD ARTICLE" variant="primary" />
+        </div>
         <ArticleListContainer 
           articles={articles} 
           onPublishToggle={onPublishToggle}

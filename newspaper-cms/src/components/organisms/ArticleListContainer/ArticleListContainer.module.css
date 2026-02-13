@@ -6,5 +6,13 @@
   background-color: white;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: none;
+  padding: 0px;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  border: none;
+  min-height: 0;
 }
