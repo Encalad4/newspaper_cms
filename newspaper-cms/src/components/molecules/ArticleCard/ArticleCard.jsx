@@ -66,17 +66,17 @@ const ArticleCard = ({ article, onPublishToggle, onEdit, onView, onDelete }) => 
 
   const handleEdit = () => {
     setIsMenuOpen(false);
-    onEdit && onEdit(article.id);
+    onEdit && onEdit(article);
   };
 
   const handleView = () => {
     setIsMenuOpen(false);
-    onView && onView(article.id);
+    onView && onView(article);
   };
 
   const handleDelete = () => {
     setIsMenuOpen(false);
-    onDelete && onDelete(article.id);
+    onDelete && onDelete(article);
   };
 
   // Close menu when clicking outside
@@ -138,6 +138,7 @@ const ArticleCard = ({ article, onPublishToggle, onEdit, onView, onDelete }) => 
     <div 
       className={`${styles.card} ${styles[publishStatus]}`}
       ref={cardRef}
+      onClick={() => onView && onView(article)}
     >
       <div className={styles.articleInfo}>
         <p className={styles.title} title={article.headline}>
@@ -152,7 +153,10 @@ const ArticleCard = ({ article, onPublishToggle, onEdit, onView, onDelete }) => 
       </div>
       
       {/* Switch - separate */}
-      <div className={styles.switchContainer}>
+      <div 
+        className={styles.switchContainer}
+        onClick={(e) => e.stopPropagation()}
+      >
         <Switch 
           isOn={article.published}
           handleToggle={() => onPublishToggle(article.id, !article.published)}
@@ -178,6 +182,7 @@ const ArticleCard = ({ article, onPublishToggle, onEdit, onView, onDelete }) => 
           <div 
             ref={menuRef} 
             className={getPositionClass()}
+            onClick={(e) => e.stopPropagation()}
           >
             <OptionsMenu 
               onEdit={handleEdit}

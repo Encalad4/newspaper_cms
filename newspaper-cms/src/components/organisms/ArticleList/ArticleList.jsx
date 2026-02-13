@@ -3,7 +3,7 @@ import React from 'react';
 import ArticleCard from '../../molecules/ArticleCard/ArticleCard';
 import styles from './ArticleList.module.css';
 
-const ArticleList = ({ articles, onPublishToggle }) => {
+const ArticleList = ({ articles, onPublishToggle, onViewArticle, onEditArticle, onDeleteArticle  }) => {
   return (
     <div className={styles.listContainer}>
       <div className={styles.list}>
@@ -12,6 +12,9 @@ const ArticleList = ({ articles, onPublishToggle }) => {
             key={article.id} 
             article={article}
             onPublishToggle={onPublishToggle}
+            onView={()=> onViewArticle(article)} // Pass the full article to view
+            onEdit={() => onEditArticle(article)} // Pass the full article to edit
+            onDelete={() => onDeleteArticle(article)} // Pass the full article to delete
           />
         ))}
       </div>

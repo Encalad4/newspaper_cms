@@ -5,7 +5,7 @@ import ArticleListHeaders from '../../molecules/ArticleListHeader/ArticleListHea
 import PaginationControls from '../../molecules/PaginationControls/PaginationControls';
 import styles from './ArticleListContainer.module.css';
 
-const ArticleListContainer = ({ articles, onPublishToggle, filterStatus = 'All', searchQuery = '' }) => {
+const ArticleListContainer = ({ articles, onPublishToggle, onDeleteArticle, onEditArticle, onViewArticle, filterStatus = 'All', searchQuery = '' }) => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(0);
   
@@ -49,6 +49,9 @@ const ArticleListContainer = ({ articles, onPublishToggle, filterStatus = 'All',
         <ArticleList 
           articles={paginatedArticles} 
           onPublishToggle={onPublishToggle}
+          onViewArticle={onViewArticle}
+          onEditArticle={onEditArticle}
+          onDeleteArticle={onDeleteArticle}
         />
       </div>
       <PaginationControls 
