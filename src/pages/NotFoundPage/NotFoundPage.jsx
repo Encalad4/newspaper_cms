@@ -1,12 +1,12 @@
 // src/pages/NotFoundPage/NotFoundPage.jsx
 import React from 'react';
-import Sidebar from '../../components/organisms/Sidebar/Sidebar';
+import SideBar from '../../components/organisms/SideBar/SideBar';
 import styles from './NotFoundPage.module.css';
 
 const NotFoundPage = ({ selectedMenuItem, onPageChange }) => { // Add onPageChange prop
   return (
     <div className={styles.pageLayout}>
-      <Sidebar 
+      <SideBar 
         selectedItem={selectedMenuItem} 
         onItemClick={onPageChange} 
       />
