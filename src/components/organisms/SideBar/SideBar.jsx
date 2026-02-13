@@ -1,11 +1,11 @@
 // src/components/organisms/SideBar/SideBar.jsx
 import React from 'react'; // Remove useState
-import styles from './Sidebar.module.css';
+import styles from './SideBar.module.css';
 
 // Import the logo
 import logo from '../../../../public/assets/icons/SeniropLogo.png';
 
-const Sidebar = ({ selectedItem = 'Dashboard', onItemClick }) => { // Add props
+const SideBar = ({ selectedItem = 'Dashboard', onItemClick }) => { // Add props
   const menuItems = [
     'Dashboard',
     'User Management',
@@ -41,4 +41,4 @@ const Sidebar = ({ selectedItem = 'Dashboard', onItemClick }) => { // Add props
   );
 };
 
-export default Sidebar;
+export default SideBar;
