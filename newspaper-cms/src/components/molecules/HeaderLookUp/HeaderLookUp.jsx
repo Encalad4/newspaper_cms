@@ -3,11 +3,14 @@ import React from 'react';
 import SearchBar from '../../atoms/SearchBar/SearchBar';
 import styles from './HeaderLookUp.module.css';
 
-const HeaderLookUp = () => {
+const HeaderLookUp = ({ onSearchChange, searchValue }) => {
   return (
     <div className={styles.headerContainer}>
       <span className={styles.dashboardTitle}>Dashboard Overview</span>
-      <SearchBar />
+      <SearchBar 
+        onChange={onSearchChange} 
+        value={searchValue}
+      />
     </div>
   );
 };
