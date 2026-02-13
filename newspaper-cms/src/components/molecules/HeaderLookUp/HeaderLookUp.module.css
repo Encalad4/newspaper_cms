@@ -1,0 +1,17 @@
+/* src/components/molecules/HeaderLookUp/HeaderLookUp.module.css */
+.headerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 26px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboardTitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A0AEC0;
+  margin: 0;
+  min-width: 15%;
+}
