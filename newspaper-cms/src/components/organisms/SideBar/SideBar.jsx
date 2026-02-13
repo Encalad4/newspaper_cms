@@ -1,13 +1,11 @@
-// src/components/organisms/Sidebar/Sidebar.jsx
-import React, { useState } from 'react';
+// src/components/organisms/SideBar/SideBar.jsx
+import React from 'react'; // Remove useState
 import styles from './Sidebar.module.css';
 
 // Import the logo
 import logo from '../../../../public/assets/icons/SeniropLogo.png';
 
-const Sidebar = () => {
-  const [selectedItem, setSelectedItem] = useState('Dashboard');
-
+const Sidebar = ({ selectedItem = 'Dashboard', onItemClick }) => { // Add props
   const menuItems = [
     'Dashboard',
     'User Management',
@@ -27,7 +25,7 @@ const Sidebar = () => {
           <button 
             key={item} 
             className={`${styles.navItem} ${selectedItem === item ? styles.selected : ''}`}
-            onClick={() => setSelectedItem(item)}
+            onClick={() => onItemClick && onItemClick(item)} // Use prop
           >
             {item}
           </button>

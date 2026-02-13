@@ -5,7 +5,7 @@ import ArticleManagementContainer from '../../components/organisms/ArticleManage
 import styles from './ArticlesPage.module.css';
 import initialArticles from '../../utils/constants/articles.json';
 
-const ArticlesPage = () => {
+const ArticlesPage = ({ onPageChange, currentPage }) => { // Add props
   const [articles, setArticles] = useState(initialArticles);
 
   const handlePublishToggle = (articleId, newPublishedState) => {
@@ -43,7 +43,10 @@ const ArticlesPage = () => {
 
   return (
     <div className={styles.pageLayout}>
-      <Sidebar />
+      <Sidebar 
+        selectedItem={currentPage} 
+        onItemClick={onPageChange} 
+      />
       <div className={styles.contentArea}>
         <div className={styles.container}>
           <ArticleManagementContainer 
