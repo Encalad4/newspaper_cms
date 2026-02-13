@@ -21,7 +21,8 @@ const RightPanel = ({
   onDateChange,
   onPublishToggle,
   errors = {},
-  isPublishChanged = false // Track if switch was changed in view mode
+  isPublishChanged = false, // Track if switch was changed in view mode
+  isButtonEnabled = true
 }) => {
   const panelRef = useRef(null);
   const overlayRef = useRef(null);
@@ -47,20 +48,23 @@ const RightPanel = ({
       case 'create':
         return {
           text: 'Save',
-          variant: 'primary',
-          onClick: onSave
+          variant: isButtonEnabled ? 'primary' : 'disabled',
+          onClick: isButtonEnabled ? onSave : null,
+          disabled: !isButtonEnabled
         };
       case 'edit':
         return {
           text: 'Update',
-          variant: 'primary',
-          onClick: onUpdate
+          variant: isButtonEnabled ? 'primary' : 'disabled',
+          onClick: isButtonEnabled ? onUpdate : null,
+          disabled: !isButtonEnabled
         };
       case 'delete':
         return {
           text: 'Delete',
           variant: 'delete',
-          onClick: onDelete
+          onClick: onDelete,
+          disabled: false
         };
       case 'view':
         return {
@@ -72,8 +76,9 @@ const RightPanel = ({
       default:
         return {
           text: 'Save',
-          variant: 'primary',
-          onClick: onSave
+          variant: isButtonEnabled ? 'primary' : 'disabled',
+          onClick: isButtonEnabled ? onSave : null,
+          disabled: !isButtonEnabled
         };
     }
   };
